@@ -10,21 +10,20 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@Table(name = "product")
+@Table(name = "pizza")
 @Entity
-public class Product extends OrderItem {
+public class Pizza extends OrderItem {
 
-    @Column(name = "nome")
-    private String nome;
+    @Column(name = "sabor")
+    private SaboresPizzaEnum sabor;
 
     @Column(name = "tamanho")
     private String tamanho;
 
     @Column(name = "preco")
-    private String preco;
+    private BigDecimal preco;
 
-    @Column(name = "quantidade")
-    private String quantidade;
+    private String descricao;
 
     @Override
     public BigDecimal calculaPreco() {
