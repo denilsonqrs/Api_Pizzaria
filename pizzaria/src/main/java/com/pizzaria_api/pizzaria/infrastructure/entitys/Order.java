@@ -23,7 +23,7 @@ public class Order {
     private OrderItem orderItem;
 
     @Column(name = "quantidade_item_pedido")
-    private int quantidade;
+    private Integer quantidade;
 
     @Column(name = "preco_item_pedido")
     private BigDecimal preco;

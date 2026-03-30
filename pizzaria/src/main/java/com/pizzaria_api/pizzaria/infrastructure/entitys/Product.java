@@ -12,7 +12,7 @@ import java.math.BigDecimal;
 @Builder
 @Table(name = "product")
 @Entity
-public class Product extends OrderItem {
+public class Product extends OrderItem{
 
     @Column(name = "nome")
     private String nome;

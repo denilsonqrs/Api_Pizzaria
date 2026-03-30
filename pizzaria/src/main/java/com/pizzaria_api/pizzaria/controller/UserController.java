@@ -17,4 +17,18 @@ public class UserController {
         userService.saveUser(user);
         return ResponseEntity.ok().build();
     }
+    @GetMapping
+    public ResponseEntity<User> getUser(@RequestParam String email){
+        return ResponseEntity.ok(userService.getUserByEmail(email));
+    }
+    @DeleteMapping
+    public ResponseEntity<Void> deleteUser(@RequestParam String email){
+        userService.deleteUserByEmail(email);
+        return ResponseEntity.ok().build();
+    }
+    @PutMapping
+    public ResponseEntity<Void> updateUser(@RequestParam Integer id, @RequestBody User user){
+        userService.updateUserById(id, user);
+        return ResponseEntity.ok().build();
+    }
 }
